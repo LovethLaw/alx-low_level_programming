@@ -1,18 +1,14 @@
 #include "main.h"
+
 /**
- * swap_int - this function swap two intergers
- *
- * @a: the frist pointer
- * @b: the second pointer
- *
- * Return: (0)
- */
+* swap_int - swaps the values of two integers.
+* @a: pointer parameter
+* @b: pointer parameter
+*/
+
 void swap_int(int *a, int *b)
 {
-	int empty;
-	int *c = &empty;
-
-	*c = *a;
+	int num = *a;
 	*a = *b;
-	*b = *c;
+	*b = num;
 }
