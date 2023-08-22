@@ -4,7 +4,7 @@
  * in reversed mode
  *
  * @s: the string input
- * Return: nothing 
+ * Return: nothing
  */
 void rev_string(char *s)
 {
@@ -15,14 +15,14 @@ void rev_string(char *s)
 
 	while (s[length] != '\0')
 	{
-		lenght++;
+		length++;
 	}
 
-	for (i 0; i < length / 2; i++)
+	for (i = 0; i < length / 2; i++)
 	{
 		temp = s[i];
-		s[i] = s[length -i - 1];
-		s[length -i - 1] =temp;
+		s[i] = s[length - i - 1];
+		s[length - i - 1] = temp;
 	}
 }
 
