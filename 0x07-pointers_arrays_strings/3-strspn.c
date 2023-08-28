@@ -1,30 +1,29 @@
-#include "main.h"
-/**
- * _strspn - Gets the length of a profix substring.
- * @s: The string to be searched.
- * @accept: The profix to be measured.
- *
- * Return: The number of bytes in s which consist only of bytes from accepts.
- */
-unsigned int _strspn(char *s, char *accept)
-{
-	unsigned int bytes = 0;
-	int index;
-
-	while (*s)
-	{
-		for (index = 0; accept[index]; index++)
-		{
-			if (*s == accept[index])
-			{
-				bytes++;
-				break;
-			}
-			else if (accept[index + 1] == '\0')
-				return (bytes);
-		}
-		s++;
-	}
-	return ('\0');
-}
-	
+#include "main.h" 
+ #include <stdio.h> 
+ /** 
+  * _strspn - length of prefix substring 
+  * @s: string to go through 
+  * @accept: accepted bytes 
+  * Return: returns usigned values 
+  */ 
+ unsigned int _strspn(char *s, char *accept) 
+ { 
+         int j; 
+         int k; 
+         unsigned int result = 0; 
+  
+         for (j = 0; s[j] != '\0'; j++) 
+         { 
+                 for (k = 0; s[k] != '\0'; k++) 
+                 { 
+                         if (s[j] == accept[k]) 
+                         { 
+                                 result++; 
+                                 break; 
+                         } 
+                 } 
+                 if (s[k] == '\0') 
+                         return (result); 
+         } 
+         return (result); 
+ }	
