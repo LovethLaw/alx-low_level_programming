@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stddef.h>
+
 /**
  * add_node - adding a node to the beginning of a node
  * @head: double pointer to the head
