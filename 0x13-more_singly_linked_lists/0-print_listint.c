@@ -1,19 +1,28 @@
+#include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
+
 /**
- * print_listint - lets print all the element linked to listint_t
- * @h: The list of linked listint_t that is to print
- * Return: The nodes number
+ * print_listint - printing the data of a node
+ * @h: head node
+ * Return: the length of the node
  */
+
 size_t print_listint(const listint_t *h)
 {
-       size_t count;
+	const listint_t *temp;
+	int len = 0;
 
-       if (h == NULL)
-	       return (0);
-       for (count = 0; h != NULL; count++)
-       {
-	       printf("%d\n", h->n);
-	       h = h->next;
-       }
-       return (count);
+	temp = h;
+	if (temp == NULL)
+		return ((size_t)(NULL));
+
+	while (temp != NULL)
+	{
+		printf("%d\n", temp->n);
+		temp = temp->next;
+		len++;
+	}
+
+	return (len);
 }
