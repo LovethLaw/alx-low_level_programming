@@ -12,6 +12,6 @@ int is = index;
 if (is > 63)
 return (-1);
 
-*n = ((1UL << i) | *n);
+*n = ((1UL << is) | *n);
 return (1);
 }

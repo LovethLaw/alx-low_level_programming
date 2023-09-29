@@ -16,7 +16,7 @@ for (bs = 63; bs >= 0; bs--)
 {
 nit = pre >> bs;
 if (nit & 1)
-next++;
+nexted++;
 }
 return (nexted);
 }
